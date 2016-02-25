@@ -1,0 +1,17 @@
+{% extends ':base.html.twig' %}
+
+{% block pageButton %}
+    <a href="{{ path('deslogar') }}" class="btn btn-primary" style="float: right;">Sair</a>
+{% endblock %}
+
+{% block menu %}
+    <li><a href="{{ path('homepage') }}">Home</a></li>
+    <li class="dropdown">
+        <a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="/#">Usuarios</a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+            <li><a href="{{ path('admin_user') }}">Listar</a></li>
+            <li><a href="{{ path('cad_user') }}">Cadastrar</a></li>
+        </ul>
+    </li>
+{% endblock %}

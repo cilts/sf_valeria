@@ -1,0 +1,43 @@
+{% extends ':admin.html.twig' %}
+
+{% block pageTitle %}
+    Sisitema Administrativo
+{% endblock %}
+
+{% block body %}
+<h1>Usuarios Cadastrados</h1>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Senha</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.nome }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                    <a href="{{ path('alter_user_pass', {'id':user.id}) }}" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-refresh"></span>
+                    </a>
+                </td>
+                <td align="right">
+                    <a href="{{ path('alter_user', {'id':user.id}) }}" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a href="{{ path('del_user', {'id':user.id}) }}" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+    <a href="{{ path('cad_user') }}" class="btn btn-primary">Cadastrar Novo</a>
+{% endblock %}

@@ -1,0 +1,27 @@
+admin_user:
+    resource: "@AdminUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+cadastro_user:
+    resource: "@AdminUserBundle/Entity/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+login:
+    path: "/admin/login"
+    defaults: { _controller: AdminUserBundle:Login:login }
+    methods: "GET"
+
+verify:
+    path: "/admin/login"
+    defaults: { _controller: AdminUserBundle:Login:verify }
+    methods: "POST"
+
+deslogar:
+    path: "/admin/deslogar"
+    defaults: { _controller: AdminUserBundle:Login:deslogar }

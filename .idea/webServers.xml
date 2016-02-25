@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d403666e-c767-48b2-a740-a635c476512e" name="SF Valeria" url="http://www.cilts.com.br/sf_valeria/web">
+        <fileTransfer host="ftp.cilts.com.br" port="21" rootFolder="/public_html/sf_valeria" password="dfc9dfc3dfc6df9adf9bdf9adf98df9adf99dfdedfd9" username="cilts" />
+      </webServer>
+    </option>
+  </component>
+</project>
